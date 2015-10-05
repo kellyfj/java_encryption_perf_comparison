@@ -32,7 +32,8 @@ public class Main {
     }
     long end = System.currentTimeMillis();
     System.out.println("GCM --> " + new String(encrypted, "UTF8"));
-    System.out.println("GCM encryption took an average of " + (end - start) / MAX_RUNS + " msecs");
+    double diff = end - start;
+    System.out.println("GCM encryption took an average of " + diff / MAX_RUNS + " msecs");
 
     start = System.currentTimeMillis();
     for (int i = 0; i < MAX_RUNS; i++) {
@@ -41,7 +42,8 @@ public class Main {
     }
     end = System.currentTimeMillis();
     System.out.println("GCM --> " + backAgain);
-    System.out.println("GCM decryption took an average of " + (end - start) / MAX_RUNS + " msecs");
+    diff = end - start;
+    System.out.println("GCM decryption took an average of " + diff / MAX_RUNS + " msecs");
   }
 
   private static void doCBCEncryption() throws Exception {
@@ -56,7 +58,8 @@ public class Main {
     }
     long end = System.currentTimeMillis();
     System.out.println("CBC --> " + new String(encrypted, "UTF8"));
-    System.out.println("CBC encryption took an average of " + (end - start) / 20 + " msecs");
+    double diff = end - start;
+    System.out.println("CBC encryption took an average of " + diff / 20 + " msecs");
 
     //CBC Decryption
     start = System.currentTimeMillis();
@@ -66,7 +69,8 @@ public class Main {
     }
     end = System.currentTimeMillis();
     System.out.println("CBC --> " + backAgain);
-    System.out.println("CBC decryption took an average of " + (end - start) / 20 + " msecs");
+    diff = end - start;
+    System.out.println("CBC decryption took an average of " + diff / 20 + " msecs");
 
   }
 
@@ -83,7 +87,8 @@ public class Main {
     }
     end = System.currentTimeMillis();
     System.out.println("ECB --> " + new String(encrypted, "UTF8"));
-    System.out.println("ECB encryption took an average of " + (end - start) / MAX_RUNS + " msecs");
+    double diff = end - start;
+    System.out.println("ECB encryption took an average of " + diff / MAX_RUNS + " msecs");
 
     start = System.currentTimeMillis();
     for (int i = 0; i < MAX_RUNS; i++) {
@@ -92,7 +97,8 @@ public class Main {
     }
     end = System.currentTimeMillis();
     System.out.println("ECB --> " + backAgain);
-    System.out.println("ECB decryption took an average of " + (end - start) / MAX_RUNS + " msecs");
+    diff = end - start;
+    System.out.println("ECB decryption took an average of " + diff / MAX_RUNS + " msecs");
 
   }
 }
