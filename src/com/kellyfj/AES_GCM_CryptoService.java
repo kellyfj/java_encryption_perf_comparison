@@ -36,6 +36,7 @@ public class AES_GCM_CryptoService {
     Cipher cipher = Cipher.getInstance(ALGORITHM_BLOCK_PADDING);
 
     cipher.init(Cipher.ENCRYPT_MODE, skeySpec, paramSpec);
+    cipher.updateAAD(new byte[]{});
 
     byte[] original = cipher.doFinal(data);
     return Base64.encodeBase64(original);
