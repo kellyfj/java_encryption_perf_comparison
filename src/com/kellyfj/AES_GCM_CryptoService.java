@@ -9,14 +9,8 @@ import javax.crypto.spec.SecretKeySpec;
 import static javax.crypto.Cipher.DECRYPT_MODE;
 import static javax.crypto.Cipher.getInstance;
 
-/**
- * Provides methods to encrypt OR decrypt using AES algorithm, and a single symmetric key.
- */
 public class AES_GCM_CryptoService {
 
-  /**
-   * AES with default block mode and padding: AES/ECB/PKCS5Padding
-   */
   public static final String ALGORITHM_BLOCK_PADDING = "AES/GCM/NoPadding";
   private static final String ALGORITHM = "AES";
 

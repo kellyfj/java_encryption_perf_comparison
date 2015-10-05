@@ -15,16 +15,9 @@ import static javax.crypto.Cipher.DECRYPT_MODE;
 import static javax.crypto.Cipher.ENCRYPT_MODE;
 import static javax.crypto.Cipher.getInstance;
 
-/**
- * Provides methods to encrypt OR decrypt using AES algorithm, and a single symmetric key.
- */
+
 public class AES_CBC_CryptoService {
 
-  public static final String UTF_8 = "UTF-8";
-
-  /**
-   * AES with default block mode and padding: AES/ECB/PKCS5Padding
-   */
   public static final String ALGORITHM_BLOCK_PADDING = "AES/CBC/PKCS5Padding";
   private static final String ALGORITHM = "AES";
 
